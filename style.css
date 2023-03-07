@@ -7,7 +7,7 @@
     font-family: 'Poppins';
 }
 
-section{
+.style-section {
     position: relative;
     width: 100%;
     min-width: 100vh;
@@ -16,9 +16,10 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+#section-content{
     background: #161616;
 }
-
 section .circle{
     position: absolute;
     top: 0;
@@ -178,6 +179,26 @@ header .navigation li a {
 .swiper-3d .swiper-slide-shadow-right{
     background-image: none !important;
 }
+
+
+#section-info{
+    background-image: linear-gradient(360deg,rgba(0, 0, 0, 0.24) 0%,#161616 100%), url(img/pexels-olena-bohovyk-1904262.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#section-info h2{
+    font-size: 1.5rem;
+}
+
+.title-section-info{
+    width: 70%;
+}
+
 
 @media (max-width: 991px){
     header{

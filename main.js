@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function(e) {
+    
+});
+
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
@@ -19,3 +23,14 @@ function toggleMenu(){
     menuToggle.classList.toggle("active")
     navigation.classList.toggle("active")
 }
+
+
+var swiperCard = new Swiper(".mySwiperCard", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    freeMode: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});

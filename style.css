@@ -180,7 +180,6 @@ header .navigation li a {
     background-image: none !important;
 }
 
-
 #section-info{
     background-image: linear-gradient(360deg,rgba(0, 0, 0, 0.24) 0%,#161616 100%), url(img/pexels-olena-bohovyk-1904262.jpg);
     background-position: center;
@@ -199,6 +198,73 @@ header .navigation li a {
     width: 70%;
 }
 
+#section-card{
+    display: flex;
+    flex-direction: column;
+}
+
+#section-card .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.mySwiperCard .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    width: 300px !important;
+    padding: 30px;
+}
+
+.mySwiperCard .swiper-slide img {
+    display: flex !important;
+    width: 70px !important;
+    position: inherit;
+}
+
+.content-card{
+    display: flex !important;
+    justify-content: space-around !important;
+    flex-direction: column !important;
+    border-radius: 15px;
+    width: 250px;
+    height: 400px;
+}
+
+/* .content-card:hover{
+    -webkit-box-shadow: 0px 3px 15px -3px rgba(59,59,59,0.66);
+    -moz-box-shadow: 0px 3px 15px -3px rgba(59,59,59,0.66);
+    box-shadow: 0px 3px 15px -3px rgba(59,59,59,0.66);
+} */
+
+.content-card .img-card{
+    display: flex;
+    justify-content: center;
+}
+
+.content-card-info{
+    margin-top: 15px;
+}
+
+.content-shopping .btn-shopping{
+    background-color: #e51e2a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    height: 30px;
+    font-weight: 600;
+}
+
+.btn-shopping:hover{
+    background-color: #fff;
+    color: #e51e2a;
+    border: 2px solid #e51e2a;
+}
 
 @media (max-width: 991px){
     header{

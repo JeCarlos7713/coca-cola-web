@@ -201,6 +201,15 @@ header .navigation li a {
 #section-card{
     display: flex;
     flex-direction: column;
+    min-height: 0;
+}
+
+#section-card .title-section-card{
+    text-align: center;
+}
+
+#section-card .title-section-card h1{
+    font-size: 1.9rem;
 }
 
 #section-card .swiper {
@@ -228,7 +237,7 @@ header .navigation li a {
 
 .content-card{
     display: flex !important;
-    justify-content: space-around !important;
+    justify-content: end !important;
     flex-direction: column !important;
     border-radius: 15px;
     width: 250px;
@@ -256,7 +265,7 @@ header .navigation li a {
 }
 
 .btn-shopping:hover{
-    transition: 0.3s;
+    transition: 0.2s;
     background-color: #fff;
     color: #e51e2a;
     cursor: pointer;

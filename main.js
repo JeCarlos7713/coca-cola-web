@@ -32,23 +32,26 @@ document.addEventListener("DOMContentLoaded", function (e) {
     ]
 
     cardClone(infosCard)
+    pageScroll()
 });
 
-var header = document.querySelector('header');
-
-window.onscroll = function () {
-    if (window.pageYOffset > 80) {
-        header.style.position = "fixed";
-        header.style.top = 0;
-        header.style.background = "rgba(0,0,0,0.6)";
-        header.style.backdropFilter = "saturate(180%) blur(20px)"
-        header.style.zIndex = "100000"
-        header.style.height = "80px"
-    } else {
-        header.style.position = "absolute";
-        header.style.top = 80;
-        header.style.background = "transparent";
-        header.style.backdropFilter = "none"
+function pageScroll(){
+    var header = document.querySelector('header');
+    
+    window.onscroll = function () {
+        if (window.pageYOffset > 80) {
+            header.style.position = "fixed";
+            header.style.top = 0;
+            header.style.background = "rgba(0,0,0,0.6)";
+            header.style.backdropFilter = "saturate(180%) blur(20px)"
+            header.style.zIndex = "100000"
+            header.style.height = "80px"
+        } else {
+            header.style.position = "absolute";
+            header.style.top = 80;
+            header.style.background = "transparent";
+            header.style.backdropFilter = "none"
+        }
     }
 }
 
@@ -98,3 +101,39 @@ let swiperCard = new Swiper(".mySwiperCard", {
         clickable: true,
     },
 });
+
+function addShopping(contentShopping){
+    let productId = contentShopping.parentElement.parentElement.parentElement.parentElement.id
+    let dataShopping = {
+        description: contentShopping.parentElement.parentElement.children[0].children[0].innerHTML,
+        price: contentShopping.parentElement.parentElement.children[0].children[1].innerHTML,
+        img: contentShopping.parentElement.parentElement.parentElement.children[0].children[0].src
+    }
+    localStorage.setItem(productId, JSON.stringify(dataShopping))
+    updateInfoShopping(localStorage)
+    contentShopping.innerHTML = "Adicionado"
+    contentShopping.previousElementSibling.style.display = "inline-block"
+}
+
+function removeShopping(contentRemoveShopping){
+    let productId = contentRemoveShopping.parentElement.parentElement.parentElement.parentElement.id
+    localStorage[productId] ? localStorage.removeItem(productId) : alert("Produto não encontrado")
+    updateInfoShopping(localStorage)
+    contentRemoveShopping.nextElementSibling.innerHTML = "Adicionar ao carrinho"
+    contentRemoveShopping.style.display = "none"
+}
+
+function updateInfoShopping(allProducts){
+    let shopping = document.getElementById("shopping")
+    if (allProducts.length > 0) {
+        for (let index = 0; index < allProducts.length; index++) {
+            setTimeout(function(){
+                shopping.innerHTML = index + 1
+            }, 500 * index)
+        }
+    }else{
+        setTimeout(function(){
+            shopping.innerHTML = 0
+        }, 500 * 2)
+    }
+}

@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -25,6 +26,7 @@
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">O que tem de novo?</a></li>
                 <li><a href="#">Contato</a></li>
+                <li><a href="#"><i id="shopping" class="bi bi-cart-fill"></i></i></a></li>
             </ul>
         </header>
         <div class="content">
@@ -92,7 +94,8 @@
                                 <p class="price">R$7,00</p>
                             </div>
                             <div class="content-shopping">
-                                <button class="btn-shopping">Adicione ao carrinho</i></button>
+                                <i class="bi bi-x-lg" style="display: none;" onclick="removeShopping(this)"></i>
+                                <button class="btn-shopping" onclick="addShopping(this)">Adicione ao carrinho</i></button>
                             </div>
                         </div>
                     </div>

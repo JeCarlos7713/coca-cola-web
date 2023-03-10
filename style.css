@@ -43,7 +43,7 @@ header{
 
 header .logo{
     position: relative;
-    max-width: 150px;
+    max-width: 100px;
 }
 
 header .navigation{
@@ -63,6 +63,9 @@ header .navigation li a {
     margin-left: 40px;
 }
 
+header .navigation #shopping{
+    font-size: 1.3rem;
+}
 
 .content{
     position: relative;

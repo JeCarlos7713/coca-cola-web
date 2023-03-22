@@ -26,7 +26,7 @@
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">O que tem de novo?</a></li>
                 <li><a href="#">Contato</a></li>
-                <li><a href="#"><i id="shopping" class="bi bi-cart-fill"></i></i></a></li>
+                <li><a href="components/shopping/shopping.html"><i id="shopping" class="bi bi-cart-fill"></i></i></a></li>
             </ul>
         </header>
         <div class="content">
@@ -83,7 +83,7 @@
         </div>
         <div class="swiper mySwiperCard">
             <div class="swiper-wrapper card-swiper-content">
-                <div class="swiper-slide cards" id="2321">
+                <div class="swiper-slide cards" >
                     <div class="content-card">
                         <div class="img-card">
                             <img src="img/cocacola1.png" alt="">
@@ -91,11 +91,17 @@
                         <div class="content-card-info">
                             <div class="info-price">
                                 <h4>Coca Cola Tradicional</h4>
-                                <p class="price">R$7,00</p>
                             </div>
                             <div class="content-shopping">
-                                <i class="bi bi-x-lg" style="display: none;" onclick="removeShopping(this)"></i>
-                                <button class="btn-shopping" onclick="addShopping(this)">Adicione ao carrinho</i></button>
+                                <div class="content-btn-shopping">
+                                    <i class="bi bi-x-lg" style="display: none;" onclick="removeShopping(this)"></i>
+                                    <button class="btn-shopping" onclick="addShopping(this)">Adicionar<span class="price">R$7,00</span></button>
+                                </div>
+                                <div class="content-quant-shopping">
+                                    <i class="bi bi-plus"></i>
+                                    <span class="quant_item">3</span>
+                                    <i class="bi bi-dash"></i>
+                                </div>
                             </div>
                         </div>
                     </div>

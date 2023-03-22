@@ -256,15 +256,26 @@ header .navigation #shopping{
     margin-top: 15px;
 }
 
+.content-shopping{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 .content-shopping .btn-shopping{
     background-color: #e51e2a;
     color: #fff;
     border: none;
     border-radius: 5px;
-    width: 80%;
+    width: 160px;
     height: 30px;
     font-weight: 600;
     border: 2px solid #e51e2a;
+}
+
+.price{
+    margin-left: 15px;
 }
 
 .btn-shopping:hover{
@@ -272,6 +283,25 @@ header .navigation #shopping{
     background-color: #fff;
     color: #e51e2a;
     cursor: pointer;
+}
+
+.content-quant-shopping{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bi-plus, .bi-dash{
+    font-size: 1.3rem;
+    margin: 5px;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+}
+
+.bi-plus:hover, .bi-dash:hover{
+    background-color: #e51e2a;
+    color: #fff;
+    border: 1px solid #e51e2a;
 }
 
 @media (max-width: 991px){

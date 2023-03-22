@@ -33,6 +33,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     cardClone(infosCard)
     pageScroll()
+
+    let initLocalStorage = localStorage
+
+    if (initLocalStorage != undefined) {
+        updateInfoShopping(initLocalStorage)
+    }
 });
 
 function pageScroll(){

@@ -299,6 +299,7 @@ header .navigation #shopping{
 }
 
 .bi-plus:hover, .bi-dash:hover{
+    transition: 0.2s;
     background-color: #e51e2a;
     color: #fff;
     border: 1px solid #e51e2a;
